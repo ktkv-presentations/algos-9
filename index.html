@@ -20,136 +20,335 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h1>
-					Beautiful presentations
-				</h1>
-				<h2>New features</h2>
-				<ul>
-					<li>Nerd icons </li>
-					<li><code class="js">(inline) => code("highlighting")</code></li>
-					<li>Automatic QR Code generation</li>
-					<li>and much more!</li>
-				</ul>
-			</section>
-			<section>
-				<h1>
-					Custom TokyoNight theme
-				</h1>
-				<h2 class="fragment">That has</h2>
-				<h3 class="fragment">Multi</h3>
-				<h4 class="fragment">Level</h4>
-				<h5 class="fragment">Heading</h5>
-				<h6 class="fragment">Coloring</h6>
-				<h6>Thanks to this project <a href="https://github.com/tcmmichaelb139/obsidian-tokyonight"></a> for the
-					colorscheme!</h6>
+				<h1>Массивы</h1>
+				<img class="r-stretch" alt="https://ktkv-presentations.github.io/algos-9/" data-type="qrcode">
 			</section>
 			<section>
 				<section>
-					<h1>Tailwind CSS</h1>
-					<div class="grid grid-cols-2 gap-8">
-						<div>
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
+					<h1>Характеристика массивов</h1>
+					<div class="grid grid-cols-2 gap-4">
+						<div class="border-b">
+							<h4>Динамическая длина</h4>
+							<p>не имеют фиксированной длины</p>
 						</div>
-						<div>
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
+						<div class="border-b">
+							<h4>Гетерогенность</h4>
+							<p>в списке могут находиться элементы различных типов данных </p>
 						</div>
-						<div class="col-span-2">
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
+						<div class="border-b">
+							<h4>Индексация</h4>
+							<p>первый элемент - <code>0</code>, однако поддерживается и обратная индексация, где <code>-1</code> -
+								последний элемент списка
+							</p>
+						</div>
+						<div class="border-b">
+							<h4>Изменяемость</h4>
+							<p>их содержимое может изменяться после создания</p>
 						</div>
 					</div>
 				</section>
 				<section>
-					<h1>Custom classes</h1>
-					<div class="grid grid-cols-3 gap-8">
-						<div class="border-r">
-							<h5>border-r</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
+					<img src="https://img-9gag-fun.9cache.com/photo/a1KMK5Y_460s.jpg" class="r-stretch" alt="">
+				</section>
+				<section>
+					<h1>Характеристика массивов</h1>
+					<div class="grid grid-cols-1 gap-4">
+						<div class="border-b">
+							<h4>Поддерживают срезы</h4>
+							<p>можно извлекать подсписки с помощью оператора среза</p>
+							<pre><code data-trim data-noescape class="python">
+my_list = [1, 2, 3, 4, 5]
+print(my_list[1:4])  # [2, 3, 4]
+					</code></pre>
 						</div>
-						<div class="border-o">
-							<h5>border-o</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
-						</div>
-						<div class="border-y">
-							<h5>border-y</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
+						<div class="border-b">
+							<h4>Вложенность</h4>
+							<p>списки могут содержать другие списки </p>
+							<pre><code data-trim data-noescape class="python">
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+print(matrix[0][1])  # 2 (элемент первой строки и второго столбца)
+					</code></pre>
 						</div>
 					</div>
 				</section>
-			</section>
-			<section>
-				<section data-auto-animate>
-					<h1>New code highlighting!</h1>
-					<div>
-						Now also has Tokyo Night <code>highlight.js</code> highlighting implementation
+				<section>
+					<h1>Характеристика массивов</h1>
+					<div class="grid grid-cols-1 gap-4">
+						<div class="border-b">
+							<h4>Итерируемость</h4>
+							<p>позволяет перебирать их элементы в цикле for</p>
+							<pre><code data-trim data-noescape class="python">
+my_list = ["apple", "banana", "cherry"]
+for fruit in my_list:
+		print(fruit)
+					</code></pre>
+						</div>
+						<div class="border-b">
+							<h4>Операции с несколькими списками</h4>
+							<p>Списки можно складывать (конкатенация) и умножать на число</p>
+							<pre><code data-trim data-noescape class="python">
+list1 = [1, 2]
+list2 = [3, 4]
+print(list1 + list2)  # [1, 2, 3, 4]
+print(list1 * 3)  # [1, 2, 1, 2, 1, 2]
+					</code></pre>
+						</div>
 					</div>
-					<pre><code data-trim data-noescape>
-var foo = {
-    bar: function () {
-             alert("Hello, World!");
-         }
-};	
+				</section>
+				<section data-auto-animate="">
+					<h1>Характеристика массивов</h1>
+					<div class="grid grid-cols-1 gap-4">
+						<div class="border-b">
+							<h4>Копирование списков</h4>
+							<pre data-id="list"><code data-trim data-noescape class="python">
+my_list = [1, 2, 3]
+any_list = my_list
+any_list.append(4)
+					</code></pre>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate="">
+					<h1>Характеристика массивов</h1>
+					<div class="grid grid-cols-1 gap-4">
+						<div class="border-b">
+							<h4>Копирование списков</h4>
+							<div class="border-r">присваивание одного списка другому передает ссылку на один и тот же объект</div>
+							<pre data-id="list"><code data-trim data-noescape class="python">
+my_list = [1, 2, 3]
+any_list = my_list
+any_list.append(4)
+print(my_list) # [1, 2, 3, 4]
+print(any_list) # [1, 2, 3, 4]
+
+copy_list = my_list[:]  # Создаем копию с помощью среза
+copy_list.append(5)
+print(my_list) # [1, 2, 3, 4]
+print(copy_list) # [1, 2, 3, 4, 5]
+					</code></pre>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h1>Создание списка</h1>
+					<h4>Пустой список создается с помощью</h4>
+					<pre><code data-trim data-noescape class="python">
+empty_list1 = []
+empty_list2 = list()
+					</code></pre>
+					<h5>Список сразу можно наполнить элементами</h5>
+					<pre><code data-trim data-noescape class="python">
+even_numbers = list(range(0, 20, 2))
+even_numbers1 = [x for x in range(0, 20, 2)]
 					</code></pre>
 				</section>
+			</section>
+			<section>
 				<section data-auto-animate>
-					<h1>New code highlighting!</h1>
-					<h5>Inline code highlighting is now also supported!</h5>
-					<p>
-						Just wrap your code with <code>&lt;code&gt;</code> tag and get
-						highlighting like this <code class="js">const foo = () => {return bar}</code>!
-					</p>
+					<h1>Вывод списка</h1>
+					<div class="border-b">
+						<h4>весь список</h4>
+						<pre><code data-trim data-noescape class="python">
+my_list = [1, 2, 3, 4, 5]
+print(my_list)  # [1, 2, 3, 4, 5]
+					</code></pre>
+					</div>
+					<br>
+					<div class="border-b">
+						<h5>по индексу</h5>
+						<pre><code data-trim data-noescape class="python">
+my_list = ["яблоко", "банан", "вишня"]
+print(my_list[0])  # яблоко
+print(my_list[1])  # банан
+print(my_list[2])  # вишня
+						</code></pre>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h1>Вывод списка</h1>
+					<h4>Вывод несуществующего индекса</h4>
+					<pre><code data-trim data-noescape class="python">
+print(my_list[3])  # IndexError: list index out of range
+					</code></pre>
+					<h5>Можно обработать с помощью конструкции try-except</h5>
+				</section>
+				<section data-auto-animate="">
+					<h1>Вывод списка</h1>
+					<h4>Вывод списка с помощью цикла for</h4>
+					<pre><code data-trim data-noescape class="python">
+my_list = [10, 20, 30, 40]
+for item in my_list:
+    print(item)
+
+# 10
+# 20
+# 30
+# 40
+					</code></pre>
+				</section>
+				<section data-auto-animate="">
+					<h1>Вывод списка</h1>
+					<h4>Одновременный вывод индексов и элементов</h4>
+					<p>можно использовать функцию enumerate()</p>
+					<pre><code data-trim data-noescape class="python">
+my_list = ["яблоко", "банан", "вишня"]
+for index, item in enumerate(my_list):
+    print(f"Индекс {index}: {item}")
+
+# Индекс 0: яблоко
+# Индекс 1: банан
+# Индекс 2: вишня
+					</code></pre>
+				</section>
+				<section data-auto-animate="">
+					<h1>Вывод списка</h1>
+					<h4>Вывод элементов через разделитель</h4>
+					<p>для вывода элементов списка в одной строке</p>
+					<pre><code data-trim data-noescape class="python">
+my_list = ["яблоко", "банан", "вишня"]
+print(" ".join(my_list))  # "яблоко банан вишня"
+					</code></pre>
+					<div class="border-r"><code>join()</code> работает только со строками</div>
 				</section>
 			</section>
 			<section>
-				<h1>Mermaid for beautiful diagrams!</h1>
-				<div class="mermaid">
-					<pre>
-						erDiagram
-    CUSTOMER ||--o{ ORDER : ""
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
-    }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
-        int orderNumber
-        string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
-    ORDER ||--|{ STUDENT : contains
-    STUDENT {
-        int orderNumber
-        string deliveryAddress
-    }
-						</pre>
-				</div>
-				<h4>Check documentation <a href="https://mermaid.js.org/config/usage.html">here</a>!</h4>
-			</section>
-			<section>
-				<h1>Now supports Nerd font icons!</h1>
-				<div>Nerdy project that adds icons to font itself</div>
-				<h6>Checkout their site for icons like this <a href="https://www.nerdfonts.com/">󰖟</a>!
-				</h6>
-			</section>
-			<section>
-				<h1>Now supports automatic QRCode generation!</h1>
-				<div>With GoQR you can just add data-type and alt attributes to your <code
-						class="html">&lt;img alt="https://goqr.me/" data-type="qrcode" / &gt;</code> tag!</div>
-				<img class="r-stretch" alt="https://goqr.me/" data-type="qrcode" />
-				</h6>
-			</section>
-			<section>
-				<h1>New changes on the way!</h1>
+				<section>
+					<h1>Методы работы со списками</h1>
+					<div class="grid grid-cols-1 gap-4">
+						<div class="border-b">
+							<div><code class="python">append()</code></div>
+							<p>добавляет элемент в конец списка</p>
+							<pre><code data-trim data-noescape class="python">
+my_list = [1, 2, 3]
+my_list.append(4)
+print(my_list)  # [1, 2, 3, 4]
+					</code></pre>
+						</div>
+						<div class="border-b">
+							<div><code class="python">extend()</code></div>
+							<p>добавляет в его конец элементы из другого списка</p>
+							<pre><code data-trim data-noescape class="python">
+my_list = [1, 2, 3]
+my_list.extend([4, 5])
+print(my_list)  # [1, 2, 3, 4, 5]
+					</code></pre>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h1>Методы работы со списками</h1>
+					<div class="grid grid-cols-1 gap-4">
+						<div class="border-b">
+							<div><code class="python">insert()</code></div>
+							<p>вставляет элемент на определенную позицию в списке</p>
+							<pre><code data-trim data-noescape class="python">
+my_list = [1, 3, 4]
+my_list.insert(1, 2)  # Вставляем 2 на индекс 1
+print(my_list)  # [1, 2, 3, 4]
+					</code></pre>
+							<p><code>1</code> - позиция, <code>2</code> - элемент</p>
+						</div>
+						<div class="border-b">
+							<div><code class="python">remove()</code></div>
+							<p>удаляет первое вхождение указанного элемента в списке</p>
+							<pre><code data-trim data-noescape class="python">
+my_list = [1, 2, 3, 2]
+my_list.remove(2)  # Удаляет первое вхождение 2
+print(my_list)  # [1, 3, 2]
+					</code></pre>
+							<div class="border-r">
+								Если элемент не найден, возникает ошибка <code class="python">ValueError</code>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h1>Методы работы со списками</h1>
+					<div class="grid grid-cols-1 gap-4">
+						<div class="border-b">
+							<div><code class="python">pop()</code></div>
+							<p>удаляет элемент по указанному индексу и возвращает его</p>
+							<pre><code data-trim data-noescape class="python">
+my_list = [1, 2, 3]
+last_item = my_list.pop()  # Удаляем последний элемент
+print(last_item)  # 3
+print(my_list)  # [1, 2]
+					</code></pre>
+						</div>
+						<div class="border-b">
+							<div><code class="python">index()</code></div>
+							<p>возвращает индекс первого вхождения указанного элемента</p>
+							<pre><code data-trim data-noescape class="python">
+my_list = [1, 2, 3, 2]
+print(my_list.index(2))  # 1 (индекс первого вхождения 2)
+					</code></pre>
+							<div class="border-r">
+								Если элемент не найден, возникает ошибка <code class="python">ValueError</code>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h1>Методы работы со списками</h1>
+					<div class="grid grid-cols-1 gap-4">
+						<div class="border-b">
+							<div><code class="python">count()</code></div>
+							<p>возвращает количество вхождений указанного элемента в списке</p>
+							<pre><code data-trim data-noescape class="python">
+my_list = [1, 2, 3, 2]
+print(my_list.count(2))  # 2
+					</code></pre>
+						</div>
+						<div class="border-b">
+							<div><code class="python">reverse()</code></div>
+							<p>меняет порядок элементов в списке на обратный</p>
+							<pre><code data-trim data-noescape class="python">
+my_list = [1, 2, 3]
+my_list.reverse()
+print(my_list)  # [3, 2, 1]
+					</code></pre>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h1>Методы работы со списками</h1>
+					<div class="border-b">
+						<div><code class="python">sort()</code></div>
+						<p>сортирует список на месте (изменяет исходный список), упорядочивая элементы по возрастанию</p>
+						<pre><code data-trim data-noescape class="python">
+my_list = [3, 1, 4, 1, 5]
+my_list.sort()
+print(my_list)  # [1, 1, 3, 4, 5]
+					</code></pre>
+						<div class="border-y">Для обратной сортировки используется параметр reverse=True</div>
+						<pre><code data-trim data-noescape class="python">
+my_list.sort(reverse=True)
+print(my_list)  # [5, 4, 3, 1, 1]
+					</code></pre>
+					</div>
+				</section>
+				<section>
+					<h1>Методы работы со списками</h1>
+					<div class="border-b">
+						<div><code class="python">copy()</code></div>
+						<p>создает поверхностную копию списка</p>
+						<pre><code data-trim data-noescape class="python">
+my_list = [1, 2, [3, 4]]
+new_list = my_list.copy()
+new_list += [5]
+print(my_list)  # [1, 2, [3, 4]]
+print(new_list)  # [1, 2, [3, 4], 5]
+
+my_list[2][0] = 0
+print(my_list)  # [1, 2, [0, 4]]
+print(new_list)  # [1, 2, [0, 4], 5]
+					</code></pre>
+					</div>
+				</section>
 			</section>
 		</div>
 	</div>
@@ -172,22 +371,22 @@ var foo = {
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
 		// - https://revealjs.com/config/
-		
+
 		const colors = {
-    blue0: 'rgb(61, 89, 161)',
-    blue: 'rgb(122, 162, 247)',
-    cyan: 'rgb(125, 207, 255)',
-    magenta: 'rgb(187, 154, 247)',
-    orange: 'rgb(255, 158, 100)',
-    yellow: 'rgb(224, 175, 104)',
-    green: 'rgb(158, 206, 106)',
-    teal: 'rgb(26, 188, 156)',
-    red: 'rgb(255, 117, 127)',
-    red1: 'rgb(219, 75, 75)',
-    fg: 'rgb(192, 202, 245)',
-    bg: 'rgb(26, 27, 38)',
-		transparent: "#00000000"
-};
+			blue0: 'rgb(61, 89, 161)',
+			blue: 'rgb(122, 162, 247)',
+			cyan: 'rgb(125, 207, 255)',
+			magenta: 'rgb(187, 154, 247)',
+			orange: 'rgb(255, 158, 100)',
+			yellow: 'rgb(224, 175, 104)',
+			green: 'rgb(158, 206, 106)',
+			teal: 'rgb(26, 188, 156)',
+			red: 'rgb(255, 117, 127)',
+			red1: 'rgb(219, 75, 75)',
+			fg: 'rgb(192, 202, 245)',
+			bg: 'rgb(26, 27, 38)',
+			transparent: "#00000000"
+		};
 
 		Reveal.initialize({
 			hash: true,
