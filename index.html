@@ -13,6 +13,8 @@
 
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/tokyo-night.css">
+	<link rel="stylesheet" href="plugin/chalkboard/style.css">
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
 	<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -359,6 +361,8 @@ print(new_list)  # [1, 2, [0, 4], 5]
 	<script src="plugin/highlight/highlight.js"></script>
 	<script src="plugin/qrcode/qrcode.js"></script>
 	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chalkboard/plugin.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
 
 	<script>
 		tailwind.config = {
@@ -391,8 +395,50 @@ print(new_list)  # [1, 2, [0, 4], 5]
 		Reveal.initialize({
 			hash: true,
 			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMermaid],
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMermaid, RevealChalkboard, RevealCustomControls],
 			slideNumber: true,
+			customcontrols: {
+				controls: [
+					{
+						icon: '<div></div>',
+						title: 'Clear canvas (DEL)',
+						action: 'RevealChalkboard.clear();'
+					},
+					{
+						icon: '<div></div>',
+						title: 'Toggle chalkboard (B)',
+						action: 'RevealChalkboard.toggleChalkboard();'
+					},
+					{
+						icon: '<div></div>',
+						title: 'Toggle notes canvas (C)',
+						action: 'RevealChalkboard.toggleNotesCanvas();'
+					}
+				],
+			},
+			chalkboard: {
+				boardmarkerWidth: 5,
+				boardmarkers: [
+					{ color: colors.bg, cursor: 'url(' + path + 'img/boardmarker-black.png), auto' },
+					{ color: colors.fg, cursor: 'url(' + path + 'img/boardmarker-black.png), auto' },
+					{ color: colors.blue, cursor: 'url(' + path + 'img/boardmarker-black.png), auto' },
+					{ color: colors.red, cursor: 'url(' + path + 'img/boardmarker-black.png), auto' },
+					{ color: colors.green, cursor: 'url(' + path + 'img/boardmarker-black.png), auto' },
+					{ color: colors.yellow, cursor: 'url(' + path + 'img/boardmarker-black.png), auto' },
+					{ color: colors.teal, cursor: 'url(' + path + 'img/boardmarker-black.png), auto' },
+					{ color: colors.orange, cursor: 'url(' + path + 'img/boardmarker-black.png), auto' },
+				],
+				chalks: [
+					{ color: colors.bg, cursor: 'url(' + path + 'img/chalk-white.png), auto' },
+					{ color: colors.fg, cursor: 'url(' + path + 'img/chalk-white.png), auto' },
+					{ color: colors.blue, cursor: 'url(' + path + 'img/chalk-white.png), auto' },
+					{ color: colors.red, cursor: 'url(' + path + 'img/chalk-white.png), auto' },
+					{ color: colors.green, cursor: 'url(' + path + 'img/chalk-white.png), auto' },
+					{ color: colors.yellow, cursor: 'url(' + path + 'img/chalk-white.png), auto' },
+					{ color: colors.teal, cursor: 'url(' + path + 'img/chalk-white.png), auto' },
+					{ color: colors.orange, cursor: 'url(' + path + 'img/chalk-white.png), auto' },
+				]
+			},
 			mermaid: {
 				securityLevel: 'loose',
 				theme: "dark",
