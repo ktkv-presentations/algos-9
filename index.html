@@ -27,6 +27,42 @@
 			</section>
 			<section>
 				<section>
+					<h1>список</h1>
+					<p>упорядоченная последовательность элементов</p>
+					<code>["string", 1, ["list", variable]]</code>
+					<br>
+					<div class="border-y">Порядок в списке имеет значение</div>
+							<pre><code data-trim data-noescape class="python">
+a = [1, 2, 3]
+b = [1, 2, 3]
+c = [3, 2, 1]
+print(a == b) # True
+print(a == c) # False
+					</code></pre>
+				</section>
+				<section>
+					<h1>Обычно используется для списка словарей</h1>
+							<pre class="r-stretch"><code data-trim data-noescape class="python">
+posts = [
+    {
+			"post_id": 3217,
+			"msg": "Hey, this is my first post!",
+			"author": 8472
+		},
+		{
+			"post_id": 3218,
+			"msg": "Hey, this is my second post!",
+			"author": 8472
+		},
+		{
+			"post_id": 3219,
+			"msg": "Hey, this is my third post!",
+			"author": 8472
+		}
+]
+					</code></pre>
+				</section>
+				<section>
 					<h1>Характеристика массивов</h1>
 					<div class="grid grid-cols-2 gap-4">
 						<div class="border-b">
@@ -350,6 +386,37 @@ print(my_list)  # [1, 2, [0, 4]]
 print(new_list)  # [1, 2, [0, 4], 5]
 					</code></pre>
 					</div>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Операции со списком</h1>
+					<h2>Конвертация в список</h2>
+						<pre><code data-trim data-noescape class="python">
+greeting = "Hello from Python"
+greeting_letters = list(greeting)
+print(greeting_letters)
+# ['H', 'e', 'l', 'l', 'o', ' ',
+'f', 'r', 'o', 'm', ' ', 'P', 'y',
+'t', 'h', 'o', 'n']
+
+my_dict = {"a": 10, "b": True}
+my_dict_keys = list(my_dict)
+# ['a', 'b']
+					</code></pre>
+				</section>
+				<section>
+					<h1>Операции со списком</h1>
+					<h2>Арифметические операции в списках</h2>
+						<pre><code data-trim data-noescape class="python">
+ratings = [2.5, 5.0, 4.3, 3.7]
+
+print(mix(ratings)) # 2.5
+print(max(ratings)) # 5.0
+print(sum(ratings)) # 5.0
+
+print(sum(ratings)/len(ratings)) # 3.875
+					</code></pre>
 				</section>
 			</section>
 		</div>
